@@ -892,4 +892,54 @@
             // Update player history
             updatePlayerHistory();
             
-            // Update
+            // This completes the JavaScript that was cut off at the end of the file
+
+function updateRemainingCount() {
+    const remainingCount = document.getElementById("remaining-count");
+    remainingCount.innerText = `Remaining Players: ${remainingPlayers.length} | Sold: ${soldPlayers.length} | Unsold: ${unsoldPlayers.length}`;
+}
+
+function createPoppers() {
+    const container = document.querySelector('.auction-container');
+    const colors = ['#F26522', '#12A0F6', '#00C853', '#FF3D00', '#7C2F86', '#EF4123', '#004BA8'];
+
+    // Create multiple confetti elements
+    for (let i = 0; i < 50; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        
+        // Random styles
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.width = Math.random() * 10 + 5 + 'px';
+        confetti.style.height = Math.random() * 10 + 5 + 'px';
+        confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        
+        container.appendChild(confetti);
+        
+        // Remove confetti after animation completes
+        setTimeout(() => {
+            confetti.remove();
+        }, 4000);
+    }
+}
+
+// Initialize with some sample data when page loads
+window.onload = function() {
+    // Sample player data
+    const samplePlayers = "Virat Kohli, MS Dhoni, Rohit Sharma, Jasprit Bumrah, KL Rahul, Hardik Pandya, " +
+                          "Ravindra Jadeja, Rishabh Pant, Shikhar Dhawan, Shreyas Iyer, Suryakumar Yadav, " +
+                          "Yuzvendra Chahal, Mohammed Shami, Bhuvneshwar Kumar";
+    
+    document.getElementById("playerInput").value = samplePlayers;
+    
+    // Sample team data
+    document.getElementById("team1Name").value = "Mumbai Indians";
+    document.getElementById("team1Budget").value = "90";
+    
+    document.getElementById("team2Name").value = "Chennai Super Kings";
+    document.getElementById("team2Budget").value = "85";
+    
+    document.getElementById("team3Name").value = "Royal Challengers";
+    document.getElementById("team3Budget").value = "80";
+};
