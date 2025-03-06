@@ -572,22 +572,22 @@
             { id: 3, name: "", initialBudget: 0, currentBudget: 0, players: [] }
         ];
         
+        // Replace with dummy image paths for demonstration
         let playerImages = {
-            "Virat Kohli": "virat_kohli.png",
-            "MS Dhoni": "ms_dhoni.png",
-            "Rohit Sharma": "rohit_sharma.png",
-            "Jasprit Bumrah": "jasprit_bumrah.png",
-            "KL Rahul": "kl_rahul.png",
-            "Hardik Pandya": "hardik_pandya.png",
-            "Ravindra Jadeja": "ravindra_jadeja.png",
-            "Rishabh Pant": "rishabh_pant.png",
-            "Shikhar Dhawan": "shikhar_dhawan.png",
-            "Shreyas Iyer": "shreyas_iyer.png",
-            "Suryakumar Yadav": "suryakumar_yadav.png",
-            "Yuzvendra Chahal": "yuzvendra_chahal.png",
-            "Mohammed Shami": "mohammed_shami.png",
-            "Bhuvneshwar Kumar": "bhuvneshwar_kumar.png"
-            // Add more player mappings as needed
+            "Virat Kohli": "/api/placeholder/180/180",
+            "MS Dhoni": "/api/placeholder/180/180",
+            "Rohit Sharma": "/api/placeholder/180/180",
+            "Jasprit Bumrah": "/api/placeholder/180/180",
+            "KL Rahul": "/api/placeholder/180/180",
+            "Hardik Pandya": "/api/placeholder/180/180",
+            "Ravindra Jadeja": "/api/placeholder/180/180",
+            "Rishabh Pant": "/api/placeholder/180/180",
+            "Shikhar Dhawan": "/api/placeholder/180/180",
+            "Shreyas Iyer": "/api/placeholder/180/180",
+            "Suryakumar Yadav": "/api/placeholder/180/180",
+            "Yuzvendra Chahal": "/api/placeholder/180/180",
+            "Mohammed Shami": "/api/placeholder/180/180",
+            "Bhuvneshwar Kumar": "/api/placeholder/180/180"
         };
         
         function startAuction() {
@@ -884,4 +884,12 @@
             
             const statusElement = document.getElementById("auctionStatus");
             statusElement.className = "auction-status";
-            statusElement.
+            statusElement.innerText = "";
+            
+            // Update team cards
+            updateTeamCards();
+            
+            // Update player history
+            updatePlayerHistory();
+            
+            // Update
